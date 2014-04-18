@@ -6,7 +6,7 @@ import org.json.JSONException;
 
 public class ClientTest extends TestCase {
 
-    public void testGetPrenom() {
+    public final void testGetPrenom() {
         // Arrange
         Client client = new Client("nom", "toto");
 
@@ -18,7 +18,7 @@ public class ClientTest extends TestCase {
 
     }
 
-    public void testSetPrenom() {
+    public final void testSetPrenom() {
         // Arrange
         Client client = new Client("nom", "toto");
 
@@ -29,7 +29,7 @@ public class ClientTest extends TestCase {
         assertEquals(client.getPrenom(), "tata");
     }
 
-    public void testGetNom() {
+    public final void testGetNom() {
         // Arrange
         Client client = new Client("toto", "prenom");
 
@@ -40,7 +40,7 @@ public class ClientTest extends TestCase {
         assertEquals("toto", nom);
     }
 
-    public void testSetNom() {
+    public final void testSetNom() {
         // Arrange
         Client client = new Client("toto", "prenom");
 
@@ -51,7 +51,7 @@ public class ClientTest extends TestCase {
         assertEquals(client.getNom(), "tata");
     }
 
-    public void testLoadJson() throws JSONException {
+    public final void testLoadJson() throws JSONException {
         // Arrange
         String json = "{\"nom\":\"Bon\",\"prenom\":\"Jean\"}";
 
@@ -63,7 +63,7 @@ public class ClientTest extends TestCase {
         assertEquals(client, clientjs);
     }
 
-    public void testEquals() {
+    public final void testEquals() {
         // Arrange
         Client client = new Client("Bon", "Jean");
         Client client2 = new Client("Bon", "Jean");
